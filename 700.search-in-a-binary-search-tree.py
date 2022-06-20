@@ -17,3 +17,18 @@ class Solution(object):
             if val<root.val: root = root.left
             elif val>root.val: root = root.right
             else: return(root)
+
+'''
+Solution 2: Recursive Approach
+The concept is the same, rather than changing the root value here, 
+we recursively call the function with the left/right subtree as root
+till we find the value
+'''
+class Solution(object):
+    def searchBST(self, root, val):
+        
+        if not root: return None
+        
+        if val<root.val: return self.searchBST(root.left,val)
+        elif val>root.val: return self.searchBST(root.right,val)
+        else: return(root)
