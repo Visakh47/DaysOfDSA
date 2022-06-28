@@ -14,7 +14,6 @@ class Solution:
             if l2 in l3:
                 return l2
             l2 = l2.next
-        
         return None
         
         
